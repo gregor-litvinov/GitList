@@ -17,7 +17,7 @@ const Home = (props) => {
 	};
 
 	return (
-		<div>
+		<div className='styleForm'>
 			<input
 				type='text'
 				id='message'
@@ -29,8 +29,10 @@ const Home = (props) => {
 
 			<h2>add URL: {state}</h2>
 
-			<button onClick={urlClick}>Click</button>
-			<button onClick={urlClick}>Click</button>
+			<p>gggggfffffff∏</p>
+			<button type='button' id='search-button' onClick={urlClick}>
+				Click
+			</button>
 		</div>
 	);
 };
