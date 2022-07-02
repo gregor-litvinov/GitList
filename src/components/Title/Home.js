@@ -1,8 +1,10 @@
 import React from 'react';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Home = (props) => {
 	const [state, setState] = useState('');
+	const navigate = useNavigate();
 
 	const inputUser = (event) => {
 		setState(event.target.value);
@@ -10,9 +12,9 @@ const Home = (props) => {
 
 	const urlClick = (event) => {
 		event.preventDefault();
-
+		navigate(`/UserName/${state}`);
 		// 👇️ value of input field
-		console.log('handleClick 👉️', state);
+		//console.log('handleClick 👉️', state);
 		props.updateUrl(state);
 	};
 
@@ -20,16 +22,12 @@ const Home = (props) => {
 		<div className='styleForm'>
 			<input
 				type='text'
-				id='message'
+				id='#input-field'
 				name='message'
 				onChange={inputUser}
 				value={state}
 				autoComplete='off'
 			/>
-
-			<h2>add URL: {state}</h2>
-
-			<p>gggggfffffff∏</p>
 			<button type='button' id='search-button' onClick={urlClick}>
 				Click
 			</button>
