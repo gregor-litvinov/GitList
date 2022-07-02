@@ -30,7 +30,7 @@ const UserName = () => {
 	return (
 		<div>
 			<button type='button' onClick={navigateClick}>
-				beack
+				back
 			</button>
 			<div>
 				{state.map((it) => {

@@ -27,7 +27,9 @@ const RepositoryName = () => {
 	return (
 		<div>
 			<Header nameRepo={nameRepo} />
-			<div id='description'>{state}</div>
+			<div id='description'>
+				<ReactMarkdown>{state}</ReactMarkdown>
+			</div>
 		</div>
 	);
 };
